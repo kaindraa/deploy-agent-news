@@ -4,7 +4,7 @@ Topik: {topic}
 Outline: {outline}
 Konteks terkumpul: {context}
 
-Apakah hampir poin Outline sudah terisi informasi relevan dan memiliki sumber?
+Apakah hampir poin Outline sudah terisi informasi relevan dan memiliki sumber **bersikap kritis, apakah memang sudah relevan dan bersumber**?
 • Jika YA, balas: false
 • Jika TIDAK, balas: true
 
