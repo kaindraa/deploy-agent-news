@@ -1,0 +1,7 @@
+streamlit
+typing-extensions
+langchain
+langchain-deepseek
+openai
+langgraph
+tavily-python
