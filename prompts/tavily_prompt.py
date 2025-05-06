@@ -18,10 +18,10 @@ Buat {max_queries} query pencarian baru (boleh dalam Bahasa Indonesia atau Inggr
 - Jangan sertakan penjelasan apa pun, hanya JSON list satu baris.
 - Anda boleh menggunakan English sebagian pencarian jika terkait.
 
-Ulangi: Jawaban Anda hanya boleh berupa **satu baris string JSON list**, tidak lebih dari {max_queries} item.
+Ulangi: Jawaban Anda hanya boleh berupa **satu baris string JSON list**, sebanyak {max_queries} item.
 
 Contoh benar:
-["Tren urbanisasi di Asia Tenggara", "Urbanization trend Southeast Asia", "Pengaruh urbanisasi terhadap tenaga kerja", "Impact of urban growth on labor markets"]
+["Tren urbanisasi di Asia Tenggara", "Urbanization trend Southeast Asia", "Pengaruh urbanisasi terhadap tenaga kerja", Dan seterusnya sampai sebanyak {max_queries}]
 
 Jawaban:
 """
