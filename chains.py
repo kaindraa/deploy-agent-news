@@ -9,7 +9,7 @@ from prompts.grader_prompt import grader_prompt_template
 from prompts.writer_prompt import writer_prompt_template
 import streamlit as st
 
-llm = ChatDeepSeek(model_name="deepseek-chat", temperature=0.5,  api_key=st.secrets["DEESEEK_API_KEY"])
+llm = ChatDeepSeek(model_name="deepseek-chat", temperature=0.5,  api_key=st.secrets["DEEPSEEK_API_KEY"])
 
 planner_chain = (
     PromptTemplate(

@@ -173,6 +173,6 @@ if run:
     if not topic.strip():
         st.error("Topik tidak boleh kosong!")
         st.stop()
-    tavily = TavilyClient( api_key=st.secrets["DEEPSEEK_API_KEY"])
+    tavily = TavilyClient( api_key=st.secrets["TAVILY_API_KEY"])
     for _ in agent.stream({"topic": topic}):
         pass
