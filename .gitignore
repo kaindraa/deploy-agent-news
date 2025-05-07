@@ -10,9 +10,10 @@ __pycache__/
 venv/
 .env/
 
-# Ignore everything in .streamlit except secrets.toml
+# Ignore everything in .streamlit 
 .streamlit/*
 
 # Ignore other generated files
 *.log
 *.sqlite3
+

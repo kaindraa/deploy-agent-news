@@ -17,7 +17,7 @@ Buat {max_queries} query pencarian baru (boleh dalam Bahasa Indonesia atau Inggr
 - Format jawaban: ["query 1", "query 2", ..., "query N"]
 - Jangan sertakan penjelasan apa pun, hanya JSON list satu baris.
 - Anda boleh menggunakan English sebagian pencarian jika terkait.
-
+- **Jika sekarang iterasi pertama, selalu search exact keyword dari topik menggunakan bahasa indonesia dan english sebagai dua query pertama** (Saya ulangi exact match kata tidak lebih atau kurang)
 Ulangi: Jawaban Anda hanya boleh berupa **satu baris string JSON list**, sebanyak {max_queries} item.
 
 Contoh benar:

@@ -128,12 +128,12 @@ def web_retriever(state):
         f"📚 Konteks Iterasi {iter_num} dari Pencarian web", expanded=False)
     for q in state["queries"]:
         log(f"🌐 Mencari: {q}")
-        res = tavily.search(query=q, topic="news", search_depth="advanced",
+        res = tavily.search(query=q, topic="general", search_depth="advanced",
                             max_results=articles_per_query, time_range=time_filter)
         results_block.markdown(f"**🔎 Query:** {q}")
         for r in res["results"]:
             url, content = r.get("url",""), r.get("content","")
-            results_block.markdown(f"- [{url}]({url}) → {content[:250]}…")
+            results_block.markdown(f"- [{url}]({url}) → {content[:]}…")
             ctx_parts.append(f"{url} - {content}")
     return {"context": state["context"]+"\n"+"\n".join(ctx_parts)}
 
@@ -153,10 +153,14 @@ def grader(state):
 def writer(state):
     stage_placeholder.info("📍 Tahap saat ini: ✍️ Menulis Laporan Akhir")
     log("✍️ Menulis laporan akhir …")
+    # st.text(state['context'])
     report = writer_chain.invoke({
         "topic": state["topic"],
         "outline": state["outline"],
-        "context": state["context"]
+        "context": state["context"],
+        "time_range_input": time_filter,
+        "current_date": date.today().strftime("%d %B %Y")
+
     })
     st.markdown("---")
     st.subheader("📌 Laporan Akhir")
